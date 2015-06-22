@@ -5,4 +5,4 @@ Future revisions will include bpm (almost done).. different sound profiles, loop
 
 A functional version of this will be available at <strong>http://www.medianocturne.com/scalegenerator/index.html</strong>
 
-This project was originally developed during my participation in the <strong>LauchCode</strong> program.  Thanks to Chris Bay and Jesse Levine for their help and guidance throughout.
+This project was originally developed during my participation in the <strong>LaunchCode</strong> program.  Thanks to Chris Bay and Jesse Levine for their help and guidance throughout.
