@@ -7,7 +7,6 @@ github: medianocturne
 // initiates the audio element
 var context = new (window.AudioContext || window.webkitAudioContext)();
 
-var test = 'test'
 
 // grabs dropdown menu selections from html
 
@@ -16,24 +15,22 @@ function player() {
     var keySelector = document.getElementById("key").value;
     var direction = document.getElementById("direction").value;
 
-    console.log(keySelector);
-    console.log(scaleSelector);
-    console.log(direction);
+
 
     if (scaleSelector === "major") {
         var scale = keySelector;
         var unit = majorArray
         scalePlayer(unit, scale, direction);
     } else if (scaleSelector === 'minor') {
-        var scale = "minor";
+        var scale = keySelector;
         var unit = minorArray
         scalePlayer(unit, scale, direction);
     } else if (scaleSelector === 'melodic') {
-        var scale = "melodic";
+        var scale = keySelector;
         var unit = melodicArray
         scalePlayer(unit, scale, direction);
     } else if (scaleSelector === 'harmonic') {
-        var scale = "harmonic";
+        var scale = keySelector;
         var unit = harmonicArray
         scalePlayer(unit, scale, direction);
     }
@@ -136,9 +133,7 @@ var harmonicArray = [toneIndex.C,toneIndex.D,toneIndex.Dsharp,toneIndex.F,toneIn
 
 function scalePlayer(unit, scale, direction) {
 
-        console.log(scale);
-        console.log(unit);
-        console.log(direction);
+    
 // overwrite players interval variables with toneIndex values for scale type
 
 // if statement for reversing intervalic direction
