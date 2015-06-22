@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<script type='text/javascript' src='scripts/audio.js'></script>
+<link rel="stylesheet" href="audioStyles.css">
+
+<title>Steve's Groovy Scale Generator</title>
+
+</head>
+
+<div id="core">
+    <body>
+        <h1>The World's Greatest Scale Generator</h1>
+
+        <div id="graphic">
+            <img src="images/clef.png">
+
+        </div>
+            <form id="player">
+                <select id="key">
+                <option value="Select">Select</option>
+                <option value="C">C</option>
+                <option value="C#/Db">C#/Db</option>
+                <option value="D">D</option>
+                <option value="D#/Eb">D#/Eb</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="F#/Gb">F#/Gb</option>
+                <option value="G">G</option>
+                <option value="G#/Ab">G#/Ab</option>
+                <option value="A">A</option>
+                <option value="A#/Bb">A#/Bb</option>
+                <option value="B">B</option>
+            </select>
+
+            <select id="scale">
+                <option value="Select">Select</option>
+                <option value="major">Major</option>
+                <option value="minor">Minor</option>
+                <option value="melodic">Melodic</option>
+                <option value="harmonic">Harmonic</option>
+            </select>
+
+            <select id="direction">
+                <option value="up">Ascending</option>
+                <option value="down">Descending</option>
+            </select>
+
+            <button id='button' type='button' value='submit' onclick="player()">Play</button>
+
+        </form>
+</div>
+
+    <div id="instructions">
+    <h3>Simply select your key and scale from the dropdown menus and voila!<br>
+        Audio is generated 'in browser' using the WebAudio API, and is iOS compatible.</h3><br>
+    </div>
+        <ul>Planned features include:<br>
+            <li>modes for all scales</li>
+            <li>bpm control</li>
+            <li>delayed start</li>
+            <li>multiple octaves</li>
+            <li>ascending and descending</li>
+            <li>on screen note names</li>
+        </ul>
+
+    </body>
+
+    <footer>&copy 2015 mediaNocturne -- coded by Steve Podgorski for LaunchCode</footer>
+</html>

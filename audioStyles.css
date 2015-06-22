@@ -1,0 +1,74 @@
+body {
+    width: 14em;
+    font-size: 2em;
+    font-family: Helvetica;
+    background-color: #CCCCCC;
+    float:left;
+}
+
+div #graphic {
+    background-image: url('clef.png');
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    float:right;
+    width: 100%;
+    position: absolute;
+    left: 550px;
+    top: 5px;
+
+}
+
+
+
+
+ul {
+    font-size: 1em;
+    font-family: Helvetica;
+    padding: inherit;
+    margin-left: 20px;
+}
+
+ul li {
+    font-size: .5em;
+    margin-left: 20px;
+    padding: inherit;
+
+}
+div {
+    font-size: 1em;
+    font-family: Helvetica;
+    margin-left: 20px;
+    margin-top: 20px;
+   padding: inherit;
+   width: 800px;
+
+}
+
+
+.core {
+    width: 300px;
+    margin-left: 20px;
+
+
+}
+
+#player {
+    margin-left: 20px;
+    margin-bottom: 60px;
+    padding: inherit;
+}
+#instructions {
+    font-size: .5em;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: inherit;
+    width: 400px;
+
+}
+
+footer {
+    font-size: .25em;
+    font-family: Helvetica;
+    margin-bottom: 10px;
+    padding:inherit;
+}
