@@ -133,7 +133,7 @@ var harmonicArray = [toneIndex.C,toneIndex.D,toneIndex.Dsharp,toneIndex.F,toneIn
 
 function scalePlayer(unit, scale, direction) {
 
-    
+
 // overwrite players interval variables with toneIndex values for scale type
 
 // if statement for reversing intervalic direction
@@ -213,7 +213,7 @@ function scalePlayer(unit, scale, direction) {
         oscillator.frequency.setValueAtTime(seventh, 4)
         oscillator.frequency.setValueAtTime(octave, 4.5)
 
-
+//
 
         oscillator.connect(gain)
         gain.connect(context.destination)
