@@ -7,7 +7,7 @@ body {
 }
 
 div #graphic {
-    background-image: url('clef.png');
+    background-image: url('images/clef.png');
     background-repeat: no-repeat;
     margin-right: 20px;
     float:right;
@@ -71,4 +71,12 @@ footer {
     font-family: Helvetica;
     margin-bottom: 10px;
     padding:inherit;
+}
+
+#bpmLabel {
+    font-size: .5em;
+}
+
+#bpmValue {
+    font-size: .5em;
 }

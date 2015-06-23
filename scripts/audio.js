@@ -14,25 +14,26 @@ function player() {
     var scaleSelector = document.getElementById("scale").value;
     var keySelector = document.getElementById("key").value;
     var direction = document.getElementById("direction").value;
-
+    var tempo = document.getElementById("bpm").value;
+    console.log(tempo);
 
 
     if (scaleSelector === "major") {
         var scale = keySelector;
         var unit = majorArray
-        scalePlayer(unit, scale, direction);
+        scalePlayer(unit, scale, direction, tempo)
     } else if (scaleSelector === 'minor') {
         var scale = keySelector;
         var unit = minorArray
-        scalePlayer(unit, scale, direction);
+        scalePlayer(unit, scale, direction, tempo);
     } else if (scaleSelector === 'melodic') {
         var scale = keySelector;
         var unit = melodicArray
-        scalePlayer(unit, scale, direction);
+        scalePlayer(unit, scale, direction, tempo);
     } else if (scaleSelector === 'harmonic') {
         var scale = keySelector;
         var unit = harmonicArray
-        scalePlayer(unit, scale, direction);
+        scalePlayer(unit, scale, direction, tempo);
     }
 
 }
@@ -131,7 +132,7 @@ var harmonicArray = [toneIndex.C,toneIndex.D,toneIndex.Dsharp,toneIndex.F,toneIn
 // player takes in toneIndex 'unit' of frequencies for scale types,
 // and 'scale' takes key info and modifys initial frequencies
 
-function scalePlayer(unit, scale, direction) {
+function scalePlayer(unit, scale, direction, tempo) {
 
 
 // overwrite players interval variables with toneIndex values for scale type
@@ -192,7 +193,7 @@ function scalePlayer(unit, scale, direction) {
     if ((unit !== undefined) && (scale !== undefined) && (direction !== undefined)){
 
 // initializes WebAudio API
-
+    console.log(tempo);
 
         var oscillator = context.createOscillator();
         var gain = context.createGain();
@@ -202,24 +203,26 @@ function scalePlayer(unit, scale, direction) {
 
         oscillator.detune.value = detune;
 
+        var quarterNoteTime = 60/tempo;
 
+        var startTime = 1
 
-        oscillator.frequency.setValueAtTime(first, 1)
-        oscillator.frequency.setValueAtTime(second, 1.5)
-        oscillator.frequency.setValueAtTime(third, 2)
-        oscillator.frequency.setValueAtTime(fourth, 2.5)
-        oscillator.frequency.setValueAtTime(fifth, 3)
-        oscillator.frequency.setValueAtTime(sixth, 3.5)
-        oscillator.frequency.setValueAtTime(seventh, 4)
-        oscillator.frequency.setValueAtTime(octave, 4.5)
+        oscillator.frequency.setValueAtTime(first, startTime)
+        oscillator.frequency.setValueAtTime(second, startTime + quarterNoteTime)
+        oscillator.frequency.setValueAtTime(third, startTime + 2*quarterNoteTime)
+        oscillator.frequency.setValueAtTime(fourth, startTime+ 3*quarterNoteTime)
+        oscillator.frequency.setValueAtTime(fifth, startTime+ 4*quarterNoteTime)
+        oscillator.frequency.setValueAtTime(sixth, startTime+ 5*quarterNoteTime)
+        oscillator.frequency.setValueAtTime(seventh, startTime+ 6*quarterNoteTime)
+        oscillator.frequency.setValueAtTime(octave, startTime+ 7*quarterNoteTime)
 
 //
 
         oscillator.connect(gain)
         gain.connect(context.destination)
 
-        oscillator.start(1)
-        oscillator.stop(5.5)
+        oscillator.start(startTime)
+        oscillator.stop(startTime + 8*quarterNoteTime + .5)
 
     }
 }
