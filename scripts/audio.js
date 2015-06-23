@@ -15,7 +15,6 @@ function player() {
     var keySelector = document.getElementById("key").value;
     var direction = document.getElementById("direction").value;
     var tempo = document.getElementById("bpm").value;
-    console.log(tempo);
 
 
     if (scaleSelector === "major") {
@@ -222,7 +221,8 @@ function scalePlayer(unit, scale, direction, tempo) {
         gain.connect(context.destination)
 
         oscillator.start(startTime)
-        oscillator.stop(startTime + 8*quarterNoteTime + .5)
+        gain.gain.linearRampToValueAtTime(0, startTime+ 8*quarterNoteTime + 1)
+        oscillator.stop(startTime + 8*quarterNoteTime + 2)
 
     }
 }

@@ -41,14 +41,18 @@ div {
     margin-top: 20px;
    padding: inherit;
    width: 800px;
+   line-height: 1.5em;
 
+}
+
+h1 {
+    line-height: 1em;
 }
 
 
 .core {
     width: 300px;
     margin-left: 20px;
-
 
 }
 
